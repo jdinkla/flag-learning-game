@@ -2,6 +2,8 @@
 
 A fun and interactive web application to test your knowledge of world flags! Built with React, Vite, and Tailwind CSS.
 
+![Flag Learning Game in action](docs/screenshot.png)
+
 ## 🎮 How to Play
 
 1. A flag will appear on the screen.
