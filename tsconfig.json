@@ -21,7 +21,10 @@
         "noFallthroughCasesInSwitch": true,
 
         /* Test globals + matchers */
-        "types": ["vitest/globals", "@testing-library/jest-dom"]
+        "types": ["vitest/globals", "@testing-library/jest-dom"],
+
+        /* Keep the incremental build-info file out of the repo root */
+        "tsBuildInfoFile": "./node_modules/.tmp/tsc-app/tsconfig.tsbuildinfo"
     },
     "include": ["src"],
     "references": [{ "path": "./tsconfig.node.json" }]

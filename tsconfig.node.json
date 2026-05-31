@@ -5,7 +5,12 @@
         "module": "ESNext",
         "moduleResolution": "bundler",
         "allowSyntheticDefaultImports": true,
-        "strict": true
+        "strict": true,
+
+        // Composite projects must emit, so send the generated JS/.d.ts and the
+        // build-info file into a gitignored temp dir instead of the repo root.
+        "outDir": "./node_modules/.tmp/tsc-node",
+        "tsBuildInfoFile": "./node_modules/.tmp/tsc-node/tsconfig.node.tsbuildinfo"
     },
     "include": ["vite.config.ts"]
 }
