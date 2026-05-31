@@ -1,9 +1,7 @@
 import FlagGame from './FlagGame'
 
 function App() {
-    return (
-        <FlagGame />
-    )
+    return <FlagGame />
 }
 
 export default App

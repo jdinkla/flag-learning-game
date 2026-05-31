@@ -27,3 +27,7 @@ dist-ssr
 # Environment variables
 .env
 .env.*
+
+# TypeScript build artifacts
+*.tsbuildinfo
+vite.config.d.ts

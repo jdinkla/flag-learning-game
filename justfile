@@ -24,6 +24,25 @@ add *ARGS:
 dev:
     npm run dev
 
+[group('dev')]
+[doc("Type-check the project with tsc")]
+typecheck:
+    npm run typecheck
+
+[group('dev')]
+[doc("Run unit tests once (CI mode)")]
+test *ARGS:
+    npx vitest run {{ARGS}}
+
+[group('dev')]
+[doc("Run unit tests in watch mode")]
+test-watch *ARGS:
+    npx vitest {{ARGS}}
+
+[group('dev')]
+[doc("Run all quality checks (typecheck + tests)")]
+check: typecheck test
+
 # --- Build ---
 
 [group('build')]
