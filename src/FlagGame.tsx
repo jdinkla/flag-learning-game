@@ -127,14 +127,17 @@ export default function FlagGame() {
                     )}
                 </div>
 
-                {feedback && (
-                    <div className={`text-center mb-4 p-3 rounded-lg ${feedback.correct
-                            ? 'bg-green-100 text-green-700'
-                            : 'bg-red-100 text-red-700'
-                        }`}>
-                        <p className="font-semibold">{feedback.message}</p>
-                    </div>
-                )}
+                {/* Reserve the feedback slot so showing/hiding it doesn't shift the buttons. */}
+                <div className="mb-4 min-h-[3.25rem] flex items-stretch">
+                    {feedback && (
+                        <div className={`w-full text-center p-3 rounded-lg ${feedback.correct
+                                ? 'bg-green-100 text-green-700'
+                                : 'bg-red-100 text-red-700'
+                            }`}>
+                            <p className="font-semibold">{feedback.message}</p>
+                        </div>
+                    )}
+                </div>
 
                 <div className="space-y-3">
                     {round?.choices.map((country, index) => {
